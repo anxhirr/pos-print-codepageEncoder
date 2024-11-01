@@ -1,5 +1,5 @@
-import definitions from '../generated/definitions.js';
 import aliases from '../generated/aliases.js';
+import definitions from '../generated/definitions.js';
 import strings from './strings.js';
 
 /**
@@ -40,7 +40,7 @@ class CodepageEncoder {
 
     /* Return codepage definition */
 
-    return structuredClone(definitions[codepage]);
+    return JSON.parse(JSON.stringify(definitions[codepage]));
   }
 
 
